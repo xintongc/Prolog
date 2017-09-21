@@ -1,0 +1,4 @@
+mylength([],0).
+mylength([_|Tail],Len):- mylength(Tail,LTail), Len is LTail+1.
+
+average(List,G):- length(List,Len), Len >0, sum_list(List,S), G is S/ Len.
