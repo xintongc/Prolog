@@ -89,3 +89,9 @@ Delete all occurrences of element X in the list L to generate a new list.
 delete_element(_,[],[]).
 delete_element(X,[X|T],R):-delete_element(X,T,R).
 delete_element(X,[Y|T],[Y|T1]):X\=Y, delete_element(X,T,T1).
+
+
+gcd(X,Y,G) :- G is the greatest common divisor of X and Y.
+
+gcd(X,0,X) :- X > 0.
+gcd(X,Y,G) :- Y > 0, Z is X mod Y, gcd(Y,Z,G).
